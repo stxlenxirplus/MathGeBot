@@ -1,4 +1,3 @@
-#<3
 import telebot
 from telebot import types
 
@@ -13,7 +12,7 @@ def start(message):
 	btn2 = types.KeyboardButton("Формулы и теоремы📕")
 	btn3 = types.KeyboardButton("Информация")
 	markup.add(btn1, btn2, btn3)
-	bot.send_message(message.chat.id, text="Привет, {0.first_name}!".format(message.from_user), reply_markup=markup)
+	bot.send_message(message.chat.id, text="Добро пожаловать, {0.first_name}!".format(message.from_user), reply_markup=markup)
 	
 @bot.message_handler(content_types=['text'])
 def func(message):
